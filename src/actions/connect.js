@@ -22,6 +22,6 @@ export async function dbConnect(){
 
     return connection;
   } catch (error) {
-    return error;
+    throw new error;
   }
 }
