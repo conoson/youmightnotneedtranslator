@@ -1,7 +1,9 @@
 {
   "name": "youmightnotneedtranslator",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "author": "conoson",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",

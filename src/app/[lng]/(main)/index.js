@@ -60,7 +60,7 @@ export function Main({ lng }) {
         <h1 className="text-balance mb-10 break-keep text-center font-sans text-5xl font-bold">
           {t('title')}
         </h1>
-        <div className="flex flex-wrap gap-4" ref={ref}>
+        <div className="mt-8 flex flex-wrap gap-4 gap-y-8 translate-x-[-1.5vw]" ref={ref}>
           {icons.length
             ? icons.map((props, i) => {
                 return (
@@ -70,8 +70,10 @@ export function Main({ lng }) {
                     style={{
                       fontSize: widths[i],
                       animationDelay: `${i * 0.03}s`,
+                      flexBasis: 'calc(100% / 10 - 14.4px)',
+                      flexGrow: 0,
                     }}
-                    class={`aspect-[1/1] flex-[calc(100%/6)] flex-grow-0 animate-bounce rounded-md border-red-700 bg-cover hover:animate-pulse hover:cursor-pointer [&:nth-of-type(10n-4)]:ml-[5vw]`}
+                    class={`relative aspect-[1/1] animate-bounce rounded-md border-red-700 bg-cover hover:animate-pulse hover:cursor-pointer [&:nth-of-type(20n+1)]:left-[3vw] [&:nth-of-type(20n+10)]:left-[3vw] [&:nth-of-type(20n+2)]:left-[3vw] [&:nth-of-type(20n+3)]:left-[3vw] [&:nth-of-type(20n+4)]:left-[3vw] [&:nth-of-type(20n+5)]:left-[3vw] [&:nth-of-type(20n+6)]:left-[3vw] [&:nth-of-type(20n+7)]:left-[3vw] [&:nth-of-type(20n+8)]:left-[3vw] [&:nth-of-type(20n+9)]:left-[3vw]`}
                     onClick={() => {
                       setTransIsOpen(false);
                       setIcon4Trans(props.name);
