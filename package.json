@@ -15,7 +15,7 @@
     "i18next": "^23.7.11",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-resources-to-backend": "^1.2.0",
-    "iconify-icon": "^1.0.8",
+    "iconify-icon": "^3.0.3",
     "mysql2": "^3.24.5",
     "next": "^15.5.27",
     "react": "^18",
