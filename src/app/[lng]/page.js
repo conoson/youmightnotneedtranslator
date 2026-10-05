@@ -4,6 +4,7 @@
 
 import { Main } from '@/app/[lng]/(main)';
 
-export default function Home({ params: { lng } }) {
+export default async function Home({ params }) {
+  const { lng } = await params;
   return <Main lng={lng} />;
 }
