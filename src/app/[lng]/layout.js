@@ -20,7 +20,8 @@ export const viewport = {
   width: 'device-width',
 };
 
-export default function RootLayout({ children, params: { lng } }) {
+export default async function RootLayout({ children, params }) {
+  const { lng } = await params;
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={inter.className}>{children}</body>

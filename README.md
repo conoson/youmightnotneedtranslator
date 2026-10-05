@@ -5,14 +5,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+
+Use npm and the committed `package-lock.json` for reproducible installs. Dependabot checks dependencies weekly; CI verifies lint, production builds, and the production dependency audit.
+
+The development tools currently depend on `braces@3.0.3`, which has an open stack-exhaustion advisory (GHSA-vfj7-8cjw-p6xm) and no patched release. This affects the Tailwind/ESLint dependency tree; production dependencies pass `npm audit --omit=dev`. Recheck the full audit when upstream publishes a fix.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
