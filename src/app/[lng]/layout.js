@@ -3,6 +3,7 @@ import './globals.css';
 import Script from 'next/script';
 import { dir } from 'i18next';
 import { languages } from '@/app/i18n/settings';
+import Providers from '@/components/Providers';
 
 export async function generateStaticParams() {
   return languages.map(lng => ({ lng }));
@@ -24,7 +25,7 @@ export default async function RootLayout({ children, params }) {
   const { lng } = await params;
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}><Providers>{children}</Providers></body>
       <Script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" />
     </html>
   );
